@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"name": "Java-Programming",
+			"path": "../.."
+		},
+		{
+			"name": "Digital-Signal-Proccessing-1",
+			"path": "../../../Digital-Signal-Proccessing-1"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"bitset": "cpp"
+		}
+	}
+}

@@ -1,0 +1,63 @@
+package GUI;
+
+
+import java.awt.Color;
+import java.awt.event.*;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+//myframe subclass
+public class myclasss extends JFrame implements ActionListener{
+	
+	int i = 0;
+	JButton button;
+	JLabel label;
+	JPanel panel;
+	myclasss(){ 
+		panel = new JPanel();
+		panel.setBackground(Color.red);
+		panel.setBounds(0,0,500,500);
+		panel.setVisible(false);
+		
+		
+		label = new JLabel();
+		label.setText("Thanks you bro");
+//		label.setBackground(Color.green);
+		label.setBounds(150,250, 150, 150);
+		label.setVisible(false);
+		
+		button = new JButton();
+		button.setBounds(100,100, 250, 100);
+		button.setText("Click Here 😊");
+		button.addActionListener(this);
+//		button.addActionListener(e-> System.out.println("Thanks"));
+		button.setFocusable(false);
+		button.setBackground(Color.green);
+		
+		this.setTitle("Button");
+		this.setLayout(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(500,500);
+		this.setVisible(true);
+		this.add(button);
+		this.add(label);
+		this.add(panel);
+	}
+	public static void main(String[] args) {
+		myclasss frame = new myclasss();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==button) {
+			label.setVisible(true);
+			panel.setVisible(true);
+			
+			
+		}
+		
+	}
+		
+}
